@@ -1,0 +1,334 @@
+body {
+	margin: 0 25px 25px 25px;
+	padding: 0;
+	color: black;
+	background: #917E6F url(../images/main/body-bg.jpg) repeat;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: small;
+}
+
+
+
+/* --- Common Styles --- */
+
+a:link, a:visited {
+}
+
+a:hover, a:active {
+}
+
+h1 {
+	margin: 0 0 20px 0;
+	padding: 0;
+	color: #A11B26;
+	font-size: 250%;
+	font-stretch: condensed;
+	letter-spacing: -2px;
+	text-transform: uppercase;
+}
+
+h2 {
+	margin: 0 0 20px 0;
+	padding: 0;
+}
+
+p {
+	margin: 0 0 20px 0;
+	padding: 0;
+}
+
+ul { margin-bottom: 20px; }
+ul li {}
+
+dt {
+	margin: 0 0 5px 0;
+	padding: 0;
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 0 1em 0;
+	padding: 0;
+}
+
+blockquote {
+	margin: 0 25px;
+	padding: 0 0 0 40px;
+	background: url(../images/main/blockquote.gif) no-repeat;
+	font-style: italic;
+}
+
+cite { font-style: italic; }
+abbr { speak: spell-out; }
+acronym { speak: normal; }
+abbr, acronym {
+	padding-bottom: 1px;
+	border-bottom: 1px dotted;
+	cursor: help;
+}
+
+#content img {
+	padding: 5px;
+	background-color: white;
+	border: 1px solid #ddd;
+}
+
+
+
+/* --- Layout --- */
+
+#wrap {
+	width: 706px;
+	margin: 0 auto;
+	padding: 0 0 3px 0;
+	background: url(../images-working/main/shadow-bottom.png) bottom left no-repeat;
+}
+
+#shadow {
+	padding: 0 3px;
+	background: #EEEEDD url(../images-working/main/shadow.png) top left repeat-y;
+}
+
+#header {
+	width: 100%; /* fix for IE */
+	margin: 0;
+	padding: 0;
+	background: #A11B26 url(../images/main/header-bg.png) top left repeat-y;
+	text-align: center;
+}
+
+#header .gutter {
+	margin: 0;
+	padding: 25px 25px 35px 25px;
+	background: url(../images/main/header-bottom.png) bottom left no-repeat;
+}
+
+#header h1, #header h1 a, #header h1 a img {
+	margin: 0;
+	padding: 0;
+	color: white;
+	border: 0;
+}
+
+#nav {
+	width: 100%; /* fix for IE */
+	margin: 0;
+	padding: 0;
+	background: #799C9E url(../images/main/nav-bg.png) top left repeat-y;
+	font-weight: bold;
+	text-align: center;
+	text-transform: lowercase;
+}
+
+#nav .gutter {
+	margin: 0;
+	padding: 5px 25px 25px 25px;
+	background: url(../images/main/nav-bottom.png) bottom left no-repeat;
+}
+
+#nav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+#nav ul li {
+	margin: 0 15px 0 0;
+	padding: 0;
+	display: inline;
+}
+
+#nav li a, #nav li a:visited {
+	color: #D3DDDE;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+#nav li a:hover, #nav li a:active {
+	color: white;
+	text-decoration: underline;
+}
+
+#main-body {
+	margin: 0;
+	padding: 0;
+	clear: both;
+}
+
+#content {
+	width: 100%; /* fix for IE */
+	margin: 0;
+	padding: 0;
+}
+
+#content .gutter {
+	margin: 0;
+	padding: 15px 75px 25px 75px;
+}
+
+#photo img {
+	display: block;
+	margin: 0 0 25px 0;
+	padding: 4px;
+	overflow: hidden;
+	background-color: white;
+	border: 1px solid #ddd;
+	text-align: center;
+}
+
+#subnav {
+	width: 200px;
+	margin: 0 0 15px 15px;
+	padding: 0;
+	float: right;
+	background-color: white;
+}
+
+#subnav .gutter {
+	margin: 0;
+	padding: 10px;
+	border: 1px solid #ddd;
+}
+
+#subnav ul {
+	margin: 0;
+	padding: 0 0 0 1.5em;
+}
+
+#subnav ul li {
+	margin: 0; 
+	padding: 0;
+}
+
+#footer {
+	margin: 0;
+	padding: 10px 75px;
+	background: #E0DCD4;
+	border-top: 1px solid #917E6F;
+	text-align: center;
+}
+
+
+
+/* --- Misc. Styles --- */
+
+.image-right {
+	position: relative; /* IE float fix */
+	margin: 0 0 20px 20px;
+	float: right;
+}
+
+.image-left {
+	position: relative; /* IE float fix */
+	margin: 0 20px 20px 0;
+	float: left;
+}
+
+#content img.nofx {
+	margin: 0;
+	padding: 0;
+	background: transparent;
+	border-style: none;
+}
+
+
+
+/* --- Header Styles --- */
+
+#logo a, #logo a:visited {
+	color: white;
+	text-decoration: none;
+}
+
+#logo a:hover, #logo a:active {
+	text-decoration: underline;
+}
+
+
+
+/* --- Footer Styles --- */
+
+#footer p {
+	margin: 0;
+	padding: 0;
+	font-size: 85%;
+}
+
+
+
+/* --- Gifts Styles --- */
+
+#gift-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#gift-list li {
+	margin: 0 0 10px 0;
+	padding: 0;
+}
+
+#gift-list li a {
+	display: block;
+	width: 550px;
+	height: 100px;
+	overflow: hidden;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+
+#gift-list li a:hover {
+	background-position: 0 -150px;
+}
+
+#gift-list li a span {
+	display: block;
+	padding: 100px 0 0 0;
+}
+
+#target a { background-image: url(../images-working/registry/target.png); }
+#bed-bath-and-beyond a { background-image: url(../images-working/registry/bed-bath-and-beyond.png); }
+#ten-thousand-villages a { background-image: url(../images-working/registry/ten-thousand-villages.png); }
+
+
+
+/* --- Contact and RSVP Form Styles --- */
+
+#contact-form #name, #contact-form #email, #contact-form #guests {
+	width: 200px;
+	padding: 5px;
+}
+
+#contact-form #questions-comments {
+	width: 400px;
+	padding: 5px;
+}
+
+#contact-form #submit {
+	padding: 5px;
+}
+
+.error-box {
+	margin: 0 0 20px 0;
+	padding: 0;
+}
+
+.error-box dt {
+	margin: 0;
+	padding: 5px 10px;
+	color: white;
+	background-color: #A11B26;
+	font-weight: bold;
+}
+
+.error-box dd {
+	margin: 0;
+	padding: 10px;
+	background-color: white;
+	border: 1px solid #A11B26;
+}
+
+.error {
+	border-color: #A11B26;
+}
