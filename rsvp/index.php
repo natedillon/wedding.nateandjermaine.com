@@ -37,62 +37,7 @@
 					<?php endif; ?>
 					<!-- InstanceBeginEditable name="content" -->
 					<h1><abbr title="Respondez, s'il vous plait">RSVP</abbr></h1>
-					<form action="<?= $_SERVER['PHP_SELF'] ?>" method="post" id="contact-form">
-						<?php include_once('../php/easyform.php');
-						
-						// use this to specify an image to be placed next to required fields that did not receive input
-						$errorindicator = '';
-						
-						// style sheet class given to required fields that did not receive input
-						$errorclass = "error";
-						
-						// if you want to show initial values in text fields, set $showvalues to true
-						$showvalues = false;
-						
-						// if you want to use javascript to remove initial values in active fields, set $Javascript to true
-						// (this is not needed if $showvalues is true)
-						$Javascript = false;
-						
-						$results = check();
-						if($results[0] == 'Errors:') { ?>
-							<dl class="error-box">
-								<dt>There has been an error</dt>
-								<dd>
-									<p>You forgot to enter the following field(s):</p>
-									<ul>
-										<?php foreach ($results as $i => $e) {
-											if ($i > 0) {
-												if($e == "email"){
-													echo "<li>E-Mail</li>";
-												} else if($e == "questions-comments") {
-													echo "<li>Message</li>";
-												} else {
-													echo "<li style=\"text-transform: capitalize;\">$e</li>";
-												}
-											} 
-										} ?>
-									</ul>
-								</dd>
-							</dl>
-							<?php ob_end_flush(); ?>
-						<?php } else if($results['name'] != '') {
-							include_once('rsvp-email-form.php');
-						} ?>
-			
-						<input type="hidden" name="required" value="name,email,guests" />
-			
-						<dl>
-							<dt><label for="name">Your name(s):</label></dt>
-							<dd><?= add('<input type="text" name="name" id="name" />') ?></dd>
-							<dt><label for="email">E-mail:</label></dt>
-							<dd><?= add('<input type="text" name="email" id="email" />') ?></dd>
-							<dt><label for="guests">Number of guests (including yourself):</label></dt>
-							<dd><?= add('<input type="text" name="guests" id="guests" />') ?></dd>
-							<dt><label for="questions-comments">Message (optional):</label></dt>
-							<dd><?= add('<textarea id="questions-comments" name="questions" cols="25" rows="7"></textarea>') ?></dd>
-						</dl>
-						<input type="submit" value="Submit" id="submit" />
-					</form>
+					<p>The <abbr title="Respondez, s'il vous plait">RSVP</abbr> form is currently closed.</p>
 					<!-- InstanceEndEditable -->
 				</div> <!-- end .gutter -->
 			</div> <!-- end #content -->
