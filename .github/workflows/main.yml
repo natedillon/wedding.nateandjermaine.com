@@ -1,0 +1,25 @@
+name: Deployment
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Sync
+        env:
+          dest: 'nate@wedding.nateandjermaine.com:/var/www/wedding.nateandjermaine.com/public_html/'
+        run: |
+          echo "${{secrets.DEPLOY_KEY}}" > deploy_key
+          chmod 600 ./deploy_key
+          rsync -chav --delete \
+            -e 'ssh -i ./deploy_key -o StrictHostKeyChecking=no' \
+            --exclude /deploy_key \
+            --exclude /.git/ \
+            --exclude /.github/ \
+            ./ ${{env.dest}}
