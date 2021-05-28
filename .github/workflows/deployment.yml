@@ -15,13 +15,13 @@ jobs:
 
       - name: Sync
         env:
-          dest: 'nate@wedding.nateandjermaine.com:/var/www/wedding.nateandjermaine.com/public_html/'
+          dest: '${{ secrets.SSH_USER }}@159.65.37.188:/var/www/wedding.nateandjermaine.com/public_html/'
         run: |
-          echo "${{secrets.DEPLOY_KEY}}" > deploy_key
+          echo "${{ secrets.DEPLOY_KEY }}" > deploy_key
           chmod 600 ./deploy_key
           rsync -chav --delete \
             -e 'ssh -i ./deploy_key -o StrictHostKeyChecking=no' \
             --exclude /deploy_key \
             --exclude /.git/ \
             --exclude /.github/ \
-            ./ ${{env.dest}}
+            ./ ${{ env.dest }}
